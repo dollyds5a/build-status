@@ -1,5 +1,5 @@
 
-listPipelines = (config) => {
+exports.listPipelines = (config) => {
 
     return Promise.resolve(
         [
@@ -22,7 +22,7 @@ listPipelines = (config) => {
     );
 };
 
-queryPipeline = (config, pipelineId) => {
+exports.queryPipeline = (config, pipelineId) => {
 
     return Promise.resolve(
         {
