@@ -1,2 +1,2 @@
-# build-status
+build-status
 
