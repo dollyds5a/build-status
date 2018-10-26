@@ -1,31 +1,86 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div>
+      <HelloWorld msg="Welcome to the Build-Status App"/>
+      <el-table
+    :data="tableData"
+    border
+    style="width: 100%">
+     <el-table-column
+      prop="buildProvider"
+      label="Build Provider"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="updated"
+      label="Updated"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="created"
+      label="Created">
+    </el-table-column>
+    <el-table-column
+      prop="buildStatus"
+      label="Build Status">
+    </el-table-column>
+  </el-table>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'app',
+  components: {
+    HelloWorld
+  },
+  data() {
+        return {
+          tableData: [{
+            buildProvider: 'AWS',
+            name: 'Wham',
+            updated: '2016-05-03',
+            created: '2016-05-03',
+            buildStatus: 'Pass'
+          }, {
+            buildProvider: 'AWS',
+            name: 'CSI',
+            updated: '2016-05-03',
+            created: '2016-05-03',
+            buildStatus: 'Pass'
+          }, {
+            buildProvider: 'AWS',
+            name: 'Avengers',
+            updated: '2016-05-03',
+            created: '2016-05-03',
+            buildStatus: 'Pass'
+          }, {
+            buildProvider: 'AWS',
+            name: 'Vision',
+            updated: '2016-05-03',
+            created: '2016-05-03',
+            buildStatus: 'Pass'
+          }]
+        }
+      }
+}
+</script>
+
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  margin-top: 60px;
 }
 </style>
