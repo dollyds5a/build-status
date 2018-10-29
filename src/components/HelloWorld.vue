@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
         <h3>Essential Links</h3>
     <ul>
-      <li><a href="https://console.aws.amazon.com/codepipeline/home?region=us-east-1#/view/PIPELINEID" target="_blank" rel="noopener">AWS CodePipeline</a></li>
+      <li><a href="https://console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1" target="_blank" rel="noopener">AWS CodePipeline</a></li>
       <li><a href="https://console.aws.amazon.com/codepipeline/home?region=us-east-1#/view/PIPELINEID" target="_blank" rel="noopener">Travis</a></li>
     </ul>
   </div>
